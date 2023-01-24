@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "TwitterChirp";
+  src: url("/assets/fonts/twitter-chirp/Font_1.eot");
+  src: url("/assets/fonts/twitter-chirp/Font_1.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/twitter-chirp/Font_1.woff2") format("woff2"),
+    url("/assets/fonts/twitter-chirp/Font_1.woff") format("woff"),
+    url("/assets/fonts/twitter-chirp/Font_1.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+$--headline: --headline;
+$--headline-bg: --headline-bg;
+$--headline-md: --headline-md;
+$--headline-sm: --headline-sm;
+$--main-bold-bg: --main-bold-bg;
+$--main-bold-md: --main-bold-md;
+$--main-bold-sm: --main-bold-sm;
+$--main-bg: --main-bg;
+$--main-md: --main-md;
+$--main-sm: --main-sm;
+
+$fonts: (
+  $--headline-bg: "40px TwitterChirp",
+  $--headline-md: "24px TwitterChirp",
+  $--headline-sm: "16px TwitterChirp",
+  $--main-bold-bg: "700 40px Roboto",
+  $--main-bold-md: "700 24px Roboto",
+  $--main-bold-sm: "700 16px Roboto",
+  $--main-bg: "40px Roboto",
+  $--main-md: "24px Roboto",
+  $--main-sm: "16px Roboto",
+);

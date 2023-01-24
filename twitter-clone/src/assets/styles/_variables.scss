@@ -1,0 +1,27 @@
+$--theme-primary: --theme-primary;
+$--theme-on-primary: --theme-on-primary;
+$--theme-secondary: --theme-secondary;
+$--theme-on-secondary: --theme-on-secondary;
+$--theme-dark-gray: --theme-dark-gray;
+$--theme-on-dark-gray: --theme-on-dark-gray;
+$--theme-light-gray: --theme-light-gray;
+$--theme-on-light-gray: --theme-on-light-gray;
+$--theme-extra-light-gray: --theme-extra-light-gray;
+$--theme-on-extra-light-gray: --theme-on-extra-light-gray;
+$--theme-super-light-gray: --theme-super-light-gray;
+$--theme-on-super-light-gray: --theme-on-super-light-gray;
+
+$theme-map-light: (
+  $--theme-primary: #1da1f2,
+  $--theme-on-primary: #fff,
+  $--theme-secondary: #14171a,
+  $--theme-on-secondary: #8c9498,
+  $--theme-dark-gray: #657785,
+  $--theme-on-dark-gray: #b5c4d1,
+  $--theme-light-gray: #aab9c4,
+  $--theme-on-light-gray: #dfecf3,
+  $--theme-extra-light-gray: #e2e8ed,
+  $--theme-on-extra-light-gray: #697177,
+  $--theme-super-light-gray: #f5f9fa,
+  $--theme-on-super-light-gray: #6e777b,
+);

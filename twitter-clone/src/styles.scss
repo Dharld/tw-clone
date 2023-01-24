@@ -1,0 +1,25 @@
+@import "./assets/styles/mixins";
+@import "./assets/styles/variables";
+@import "./assets/styles/themes";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root.light {
+  @include spread-map($theme-map-light);
+  @include spread-map($fonts);
+}
+
+/* :root.dark {
+  @include spread-map($theme-map-dark);
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// fonts
