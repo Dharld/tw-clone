@@ -1,0 +1,76 @@
+.root {
+  background-color: #242d34;
+}
+
+.root .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.root .container .box {
+  background-color: #000000;
+  color: white;
+  width: 75%;
+  max-width: 600px;
+  max-height: 1200px;
+  padding: 1rem 1rem 10rem;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.root .container .box .first-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+
+.root .container .box .first-line .closeButton {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.root .container .box .first-line .closeButton:hover {
+  background: #242d34;
+}
+
+.root .container .box .first-line svg {
+  width: 25px;
+  height: 25px;
+  fill: #d4d6d8;
+}
+
+.root .container .box .first-line svg.twitter-logo {
+  margin-left: -2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100% !important;
+  }
+  .box {
+    width: 100% !important;
+    height: 100vh;
+    border-radius: 0% !important;
+  }
+}
+/*# sourceMappingURL=authentication.component.css.map */

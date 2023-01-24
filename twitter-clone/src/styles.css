@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "TwitterChirp";
+  src: url("/assets/fonts/twitter-chirp/Font_1.eot");
+  src: url("/assets/fonts/twitter-chirp/Font_1.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/twitter-chirp/Font_1.woff2") format("woff2"), url("/assets/fonts/twitter-chirp/Font_1.woff") format("woff"), url("/assets/fonts/twitter-chirp/Font_1.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --theme-primary: #1da1f2;
+  --theme-on-primary: #fff;
+  --theme-secondary: #14171a;
+  --theme-on-secondary: #8c9498;
+  --theme-dark-gray: #657785;
+  --theme-on-dark-gray: #b5c4d1;
+  --theme-light-gray: #aab9c4;
+  --theme-on-light-gray: #dfecf3;
+  --theme-extra-light-gray: #e2e8ed;
+  --theme-on-extra-light-gray: #697177;
+  --theme-super-light-gray: #f5f9fa;
+  --theme-on-super-light-gray: #6e777b;
+  --headline-bg: 2.5rem "TwitterChirp";
+  --headline-md: 1.5rem "TwitterChirp";
+  --headline-sm: 1rem "TwitterChirp";
+  --main-bold-bg: 700 2.5rem Roboto;
+  --main-bold-md: 700 1.5rem Roboto;
+  --main-bold-sm: 700 1rem Roboto;
+  --main-bg: 2.5rem Roboto;
+  --main-md: 1.5rem Roboto;
+  --main-sm: 1rem Roboto;
+}
+
+/* :root.dark {
+  @include spread-map($theme-map-dark);
+} */
+body {
+  margin: 0;
+  padding: 0;
+  font: var(--main-sm);
+}
+
+svg {
+  width: 35px;
+  height: 35px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 80%;
+}
+
+.headline {
+  font: var(--headline-bg);
+}
+
+.button {
+  background-color: #fff;
+  padding: 0.5rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+  margin: 0 auto;
+  color: var(--theme-on-extra-light-gray);
+  cursor: pointer;
+  -webkit-transition: 150ms ease-in all;
+  transition: 150ms ease-in all;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  /* &:hover {
+    background-color: var(--theme--extra-light-gray);
+    color: var(--theme-on-extra-light-gray);
+  } */
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

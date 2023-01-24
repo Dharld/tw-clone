@@ -1,0 +1,63 @@
+.root {
+  background-color: #242d34;
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    .box {
+      background-color: #000000;
+      color: white;
+      width: 75%;
+      max-width: 600px;
+      max-height: 1200px;
+      padding: 1rem 1rem 10rem;
+      margin: auto;
+      border-radius: 25px;
+
+      .first-line {
+        display: flex;
+        margin-bottom: 1.25rem;
+
+        .closeButton {
+          cursor: pointer;
+          padding: 0.5rem;
+          display: grid;
+          place-items: center;
+          background: transparent;
+          transition: background-color 100ms ease-in;
+          border-radius: 50%;
+          z-index: 10;
+
+          &:hover {
+            background: #242d34;
+          }
+        }
+        svg {
+          width: 25px;
+          height: 25px;
+          fill: #d4d6d8;
+
+          &.twitter-logo {
+            margin-left: -2rem;
+
+            align-self: center;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100% !important;
+  }
+  .box {
+    width: 100% !important;
+    height: 100vh;
+    border-radius: 0% !important;
+  }
+}

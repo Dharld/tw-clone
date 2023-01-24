@@ -1,0 +1,151 @@
+.content {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.content .headline {
+  text-align: center;
+  color: #d4d6d8;
+}
+
+.content .button.special {
+  margin: 1.5rem 0;
+}
+
+.content .button.special .profile-icon {
+  background: orange;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  aspect-ratio: 1 / 1;
+  font-weight: 700;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.content .button.special .texts {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 11px;
+}
+
+.content .button.special .texts span {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .button.special .texts span svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--theme-on-super-light-gray);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.content .button.special .texts span.bold {
+  font-weight: 700;
+  color: var(--theme-secondary);
+}
+
+.content .button.special .google-mark svg {
+  width: 24px;
+  height: 24px;
+}
+
+.content .button.apple {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--theme-secondary);
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
+
+.content .button.apple svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.35rem;
+}
+
+.separator {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.separator::after, .separator::before {
+  position: absolute;
+  content: "";
+  width: 45%;
+  height: 1px;
+  margin: auto 0;
+  background-color: var(--theme-light-gray);
+}
+
+.separator::before {
+  left: 0;
+}
+
+.separator::after {
+  right: 0;
+}
+
+.policy {
+  font-size: 11px;
+  color: var(--theme-on-secondary);
+  margin: 1rem 0;
+}
+
+.policy span {
+  color: var(--theme-primary);
+  -webkit-transition: -webkit-text-decoration 100ms ease-in;
+  transition: -webkit-text-decoration 100ms ease-in;
+  transition: text-decoration 100ms ease-in;
+  transition: text-decoration 100ms ease-in, -webkit-text-decoration 100ms ease-in;
+  cursor: pointer;
+}
+
+.policy span:hover {
+  text-decoration: underline;
+}
+
+.already-have-an-account {
+  color: var(--theme-on-secondary);
+  margin-top: 5rem;
+}
+
+.already-have-an-account span {
+  color: var(--theme-primary);
+  cursor: pointer;
+}
+
+.already-have-an-account span:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=signin.component.css.map */
