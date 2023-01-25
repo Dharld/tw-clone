@@ -1,5 +1,5 @@
 <div class="content">
-  <h1 class="headline">Join Twitter Today</h1>
+  <h1 class="headline">Sign in to Twitter</h1>
   <div class="buttons">
     <div class="button special" role="button">
       <div class="profile-icon">Y</div>
@@ -24,17 +24,26 @@
         <svg viewBox="0 0 24 24">
           <use href="/assets/icons/icons.svg#appleLogo" />
         </svg> </i
-      >Sign Up With Apple
+      >Sign in With Apple
     </div>
   </div>
+
   <span class="separator">or</span>
-  <button class="button">Create an account</button>
-  <div class="policy">
-    By signing up, you agree to the <span>Terms of Service</span> and
-    <span>Privacy Policy</span>, including <span>Cookie Use</span>.
+  <div class="phoneOrEmail {{ 'test' }}">
+    <label for="phoneOrEmail">Phone, email, or username</label>
+    <input
+      type="text"
+      name="phoneOrEmail"
+      id="phoneOrEmail"
+      [(ngModel)]="control"
+      #formControl="ngModel"
+      required
+    />
   </div>
+  <button class="button">Next</button>
+  <button class="button outline">Forgot password?</button>
 
   <div class="already-have-an-account">
-    Have an account already? <span>Log in</span>
+    Don't have an account? <a routerLink="/signup"><span>Signup</span></a>
   </div>
 </div>

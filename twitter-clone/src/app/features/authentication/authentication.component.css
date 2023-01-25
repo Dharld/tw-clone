@@ -9,7 +9,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .root .container .box {
@@ -18,7 +18,7 @@
   width: 75%;
   max-width: 600px;
   max-height: 1200px;
-  padding: 1rem 1rem 10rem;
+  padding: 1rem 1rem 5rem;
   margin: auto;
   border-radius: 25px;
 }

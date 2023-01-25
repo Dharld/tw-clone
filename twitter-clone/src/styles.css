@@ -77,17 +77,101 @@ svg {
           align-items: center;
   border-radius: 50px;
   margin: 0 auto;
-  color: var(--theme-on-extra-light-gray);
+  color: black;
+  font-weight: 700;
   cursor: pointer;
   -webkit-transition: 150ms ease-in all;
   transition: 150ms ease-in all;
   width: 100%;
-  height: 45px;
+  height: 40px;
   text-align: center;
+  margin: 1rem 0;
   /* &:hover {
     background-color: var(--theme--extra-light-gray);
     color: var(--theme-on-extra-light-gray);
   } */
+}
+
+.button.special .profile-icon {
+  background: orange;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  aspect-ratio: 1 / 1;
+  font-weight: 700;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.button.special .texts {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.button.special .texts span {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button.special .texts span svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--theme-on-super-light-gray);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.button.special .texts span.bold {
+  font-weight: 700;
+  color: var(--theme-secondary);
+}
+
+.button.special .google-mark svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button.apple {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--theme-secondary);
+  font-weight: 600;
+}
+
+.button.apple svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.35rem;
+}
+
+.button.outline {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {

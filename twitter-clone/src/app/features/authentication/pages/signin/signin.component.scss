@@ -5,66 +5,6 @@
     text-align: center;
     color: #d4d6d8;
   }
-  .button {
-    &.special {
-      margin: 1.5rem 0;
-      .profile-icon {
-        background: orange;
-        color: white;
-        border-radius: 50%;
-        width: 25px;
-        height: 25px;
-        aspect-ratio: 1 / 1;
-        font-weight: 700;
-        display: grid;
-        place-items: center;
-        font-size: 0.75rem;
-        margin-right: 0.75rem;
-      }
-      .texts {
-        flex: 1;
-        font-size: 11px;
-        span {
-          display: block;
-          display: flex;
-          align-items: center;
-
-          svg {
-            width: 15px;
-            height: 15px;
-            fill: var(--theme-on-super-light-gray);
-            display: grid;
-            place-items: center;
-          }
-
-          &.bold {
-            font-weight: 700;
-            color: var(--theme-secondary);
-          }
-        }
-      }
-      .google-mark {
-        svg {
-          width: 24px;
-          height: 24px;
-        }
-      }
-    }
-    &.apple {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: var(--theme-secondary);
-      font-weight: 600;
-      margin: 1.5rem 0;
-
-      svg {
-        width: 24px;
-        height: 24px;
-        margin-right: 0.35rem;
-      }
-    }
-  }
 }
 
 .separator {
@@ -93,22 +33,6 @@
   }
 }
 
-.policy {
-  font-size: 11px;
-  color: var(--theme-on-secondary);
-  margin: 1rem 0;
-
-  span {
-    color: var(--theme-primary);
-    transition: text-decoration 100ms ease-in;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 .already-have-an-account {
   color: var(--theme-on-secondary);
   margin-top: 5rem;
@@ -119,6 +43,38 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+.phoneOrEmail {
+  border: 0.75px solid var(--theme-on-secondary);
+  border-radius: 4px;
+  padding: 1.25rem 0.5rem;
+  position: relative;
+  label {
+    position: absolute;
+    color: var(--theme-on-secondary);
+    transition: all 150ms ease-in;
+    transform: translateY(0);
+  }
+  input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+    outline: none;
+    font-size: 1.25rem;
+  }
+
+  &:focus-within,
+  &.not-empty {
+    border: 2px solid var(--theme-primary);
+    label {
+      color: var(--theme-primary);
+      font-size: 0.65rem;
+      transform: translateY(-0.75rem);
     }
   }
 }
