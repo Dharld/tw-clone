@@ -104,4 +104,8 @@
   background: transparent;
   color: white;
 }
+
+.button:hover {
+  background-color: #e6e6e6;
+}
 /*# sourceMappingURL=button.component.css.map */

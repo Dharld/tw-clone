@@ -7,9 +7,10 @@ import { AuthenticationModule } from './features/authentication/authentication.m
 import { SharedModule } from './shared/shared.module';
 
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './features/home/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
