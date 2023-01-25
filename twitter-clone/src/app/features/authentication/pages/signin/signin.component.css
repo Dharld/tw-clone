@@ -53,41 +53,4 @@
 .already-have-an-account span:hover {
   text-decoration: underline;
 }
-
-.phoneOrEmail {
-  border: 0.75px solid var(--theme-on-secondary);
-  border-radius: 4px;
-  padding: 1.25rem 0.5rem;
-  position: relative;
-}
-
-.phoneOrEmail label {
-  position: absolute;
-  color: var(--theme-on-secondary);
-  -webkit-transition: all 150ms ease-in;
-  transition: all 150ms ease-in;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.phoneOrEmail input {
-  background: transparent;
-  border: none;
-  width: 100%;
-  height: 100%;
-  color: white;
-  outline: none;
-  font-size: 1.25rem;
-}
-
-.phoneOrEmail:focus-within, .phoneOrEmail.not-empty {
-  border: 2px solid var(--theme-primary);
-}
-
-.phoneOrEmail:focus-within label, .phoneOrEmail.not-empty label {
-  color: var(--theme-primary);
-  font-size: 0.65rem;
-  -webkit-transform: translateY(-0.75rem);
-          transform: translateY(-0.75rem);
-}
 /*# sourceMappingURL=signin.component.css.map */

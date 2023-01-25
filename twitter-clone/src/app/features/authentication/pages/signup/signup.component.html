@@ -1,34 +1,11 @@
 <div class="content">
   <h1 class="headline">Join Twitter Today</h1>
   <div class="buttons">
-    <div class="button special" role="button">
-      <div class="profile-icon">Y</div>
-      <div class="texts">
-        <span class="bold">Sign in as Yann</span>
-        <span
-          >yanndjoumessi@gmail.com
-          <i>
-            <svg viewBox="0 0 24 24">
-              <use href="/assets/icons/icons.svg#arrowDown" />
-            </svg> </i
-        ></span>
-      </div>
-      <div class="google-mark">
-        <svg viewBox="0 0 48 48">
-          <use href="/assets/icons/icons.svg#googleLogo" />
-        </svg>
-      </div>
-    </div>
-    <div class="button apple" role="button">
-      <i>
-        <svg viewBox="0 0 24 24">
-          <use href="/assets/icons/icons.svg#appleLogo" />
-        </svg> </i
-      >Sign Up With Apple
-    </div>
+    <app-button type="google"></app-button>
+    <app-button type="apple" text="Sign Up With Apple"></app-button>
   </div>
   <span class="separator">or</span>
-  <button class="button">Create an account</button>
+  <app-button text="Create an account"></app-button>
   <div class="policy">
     By signing up, you agree to the <span>Terms of Service</span> and
     <span>Privacy Policy</span>, including <span>Cookie Use</span>.

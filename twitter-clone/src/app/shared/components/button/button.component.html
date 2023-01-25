@@ -1,0 +1,27 @@
+<div class="button special" role="button" *ngIf="type == 'google'">
+  <div class="profile-icon">Y</div>
+  <div class="texts">
+    <span class="bold">Sign in as Yann</span>
+    <span
+      >yanndjoumessi@gmail.com
+      <i>
+        <svg viewBox="0 0 24 24">
+          <use href="/assets/icons/icons.svg#arrowDown" />
+        </svg> </i
+    ></span>
+  </div>
+  <div class="google-mark">
+    <svg viewBox="0 0 48 48">
+      <use href="/assets/icons/icons.svg#googleLogo" />
+    </svg>
+  </div>
+</div>
+<div class="button apple" role="button" *ngIf="type == 'apple'">
+  <i>
+    <svg viewBox="0 0 24 24">
+      <use href="/assets/icons/icons.svg#appleLogo" />
+    </svg> </i
+  >{{ text }}
+</div>
+<button class="button" *ngIf="type == 'simple'">{{ text }}</button>
+<button class="button outline" *ngIf="type == 'outline'">{{ text }}</button>
