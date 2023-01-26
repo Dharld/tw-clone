@@ -1,0 +1,60 @@
+<div class="container">
+  <form class="signup-form">
+    <div class="first-line">
+      <div class="close-icon">
+        <a routerLink="../">
+          <i>
+            <svg viewBox="0 0 24 24">
+              <use href="/assets/icons/icons.svg#closeIcon" />
+            </svg>
+          </i>
+        </a>
+      </div>
+      <div class="steps">Step 1 of 5</div>
+    </div>
+    <div class="content">
+      <div class="headline">Create your account</div>
+      <div class="inputs">
+        <app-input-box class="input" placeholder="Name"></app-input-box>
+        <app-input-box class="input" placeholder="Email"></app-input-box>
+      </div>
+      <div class="date-of-birth">
+        <h3>Date of birth</h3>
+        <p>
+          This will not be shown publicly. Confirm your own age, even if this
+          account is for a business, a pet, or something else.
+        </p>
+        <div class="selects">
+          <div class="select-box active long">
+            <select name="month" id="month">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+            </select>
+            <label for="month">Month</label>
+            <div class="selectedValue">January</div>
+            <i>
+              <svg viewBox="0 0 24 24">
+                <use href="/assets/icons/icons.svg#arrowDown" />
+              </svg>
+            </i>
+          </div>
+          <!-- <div class="select-box med">
+            <select name="month" id="month">
+              <option value="31">31</option>
+              <option value="30">30</option>
+              <option value="29">29</option>
+            </select>
+          </div>
+          <div class="select-box year">
+            <select name="Year" id="Year">
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+            </select>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

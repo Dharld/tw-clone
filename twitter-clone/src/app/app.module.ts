@@ -14,9 +14,9 @@ import { HomeComponent } from './features/home/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthenticationModule,
     FormsModule,
     SharedModule,
-    AuthenticationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

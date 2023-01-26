@@ -28,7 +28,6 @@
 }
 
 .button.special .profile-icon {
-  background: orange;
   color: white;
   border-radius: 50%;
   width: 25px;
@@ -103,6 +102,10 @@
   border: 1px solid white;
   background: transparent;
   color: white;
+}
+
+.button.outline:hover {
+  background-color: #181919;
 }
 
 .button:hover {

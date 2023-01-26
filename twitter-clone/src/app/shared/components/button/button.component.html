@@ -1,9 +1,20 @@
-<div class="button special" role="button" *ngIf="type == 'google'">
-  <div class="profile-icon">Y</div>
+<div class="button special" role="button" *ngIf="type == 'google' && user">
+  <div class="profile-icon">
+    <img
+      [src]="user.photoUrl"
+      alt=""
+      [ngStyle]="{
+        backgroundImage: user.photoUrl,
+        width: '100%',
+        height: '100%',
+        borderRadius: '50%'
+      }"
+    />
+  </div>
   <div class="texts">
-    <span class="bold">Sign in as Yann</span>
+    <span class="bold">Sign in as {{ user.displayName }}</span>
     <span
-      >yanndjoumessi@gmail.com
+      >{{ user.email }}
       <i>
         <svg viewBox="0 0 24 24">
           <use href="/assets/icons/icons.svg#arrowDown" />
@@ -15,6 +26,13 @@
       <use href="/assets/icons/icons.svg#googleLogo" />
     </svg>
   </div>
+</div>
+<div class="button" *ngIf="type == 'google' && !user" role="button">
+  <i>
+    <svg viewBox="0 0 24 24">
+      <use href="/assets/icons/icons.svg#googleLogo" />
+    </svg> </i
+  >{{ text }}
 </div>
 <div class="button apple" role="button" *ngIf="type == 'apple'">
   <i>

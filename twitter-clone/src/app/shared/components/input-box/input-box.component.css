@@ -1,17 +1,17 @@
 .input {
   border: 0.75px solid var(--theme-on-secondary);
   border-radius: 4px;
-  padding: 1.25rem 0.5rem;
   position: relative;
+  margin: 1.5rem 0;
 }
 
 .input label {
   position: absolute;
-  color: var(--theme-on-secondary);
+  color: var(--theme-dark-gray);
   -webkit-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translate(0.5rem, 0.5rem);
+          transform: translate(0.5rem, 0.5rem);
 }
 
 .input input {
@@ -22,6 +22,7 @@
   color: white;
   outline: none;
   font-size: 1.25rem;
+  padding: 1.25rem 0.5rem;
 }
 
 .input:focus-within, .input.not-empty {
@@ -31,7 +32,7 @@
 .input:focus-within label, .input.not-empty label {
   color: var(--theme-primary);
   font-size: 0.65rem;
-  -webkit-transform: translateY(-0.75rem);
-          transform: translateY(-0.75rem);
+  -webkit-transform: translate(0.5rem, 0.25rem);
+          transform: translate(0.5rem, 0.25rem);
 }
 /*# sourceMappingURL=input-box.component.css.map */

@@ -34,9 +34,12 @@
   --main-bold-bg: 700 2.5rem Roboto;
   --main-bold-md: 700 1.5rem Roboto;
   --main-bold-sm: 700 1rem Roboto;
+  --main-bold-extra-sm: 700 0.85rem Roboto;
   --main-bg: 2.5rem Roboto;
   --main-md: 1.5rem Roboto;
   --main-sm: 1rem Roboto;
+  --main-extra-sm: 0.85rem Roboto;
+  --main-super-sm: 0.75rem Roboto;
 }
 
 /* :root.dark {

@@ -1,7 +1,7 @@
 <div class="content">
   <h1 class="headline">Sign in to Twitter</h1>
   <div class="buttons">
-    <app-button type="google"></app-button>
+    <app-button type="google" (click)="authService.GoogleAuth()"></app-button>
     <app-button type="apple" text="Sign in With Apple"></app-button>
   </div>
 

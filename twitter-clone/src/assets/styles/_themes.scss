@@ -19,9 +19,12 @@ $--headline-sm: --headline-sm;
 $--main-bold-bg: --main-bold-bg;
 $--main-bold-md: --main-bold-md;
 $--main-bold-sm: --main-bold-sm;
+$--main-bold-extra-sm: --main-bold-extra-sm;
 $--main-bg: --main-bg;
 $--main-md: --main-md;
 $--main-sm: --main-sm;
+$--main-extra-sm: --main-extra-sm;
+$--main-super-sm: --main-super-sm;
 
 $fonts: (
   $--headline-bg: 2.5rem "TwitterChirp",
@@ -30,7 +33,10 @@ $fonts: (
   $--main-bold-bg: 700 2.5rem Roboto,
   $--main-bold-md: 700 1.5rem Roboto,
   $--main-bold-sm: 700 1rem Roboto,
+  $--main-bold-extra-sm: 700 0.85rem Roboto,
   $--main-bg: 2.5rem Roboto,
   $--main-md: 1.5rem Roboto,
   $--main-sm: 1rem Roboto,
+  $--main-extra-sm: 0.85rem Roboto,
+  $--main-super-sm: 0.75rem Roboto,
 );

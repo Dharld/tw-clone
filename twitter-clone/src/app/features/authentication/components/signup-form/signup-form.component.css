@@ -1,0 +1,130 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #242d34;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  z-index: 15;
+}
+
+.container .signup-form {
+  background-color: #000000;
+  color: white;
+  width: 75%;
+  max-width: 600px;
+  max-height: 1200px;
+  padding: 1rem 1rem 5rem;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.container .signup-form .first-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .signup-form .first-line svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.container .signup-form .first-line .close-icon {
+  margin-right: 1.5rem;
+}
+
+.container .signup-form .first-line .steps {
+  font: var(--main-bold-md);
+}
+
+.container .signup-form .content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container .signup-form .content .headline {
+  margin: 1.5rem 0;
+}
+
+.container .signup-form .content .inputs .input {
+  margin: 1rem 0;
+}
+
+.container .signup-form .content .date-of-birth h3 {
+  font: var(--main-bold-sm);
+  margin: 0.25rem 0;
+}
+
+.container .signup-form .content .date-of-birth p {
+  font: var(--main-extra-sm);
+  color: var(--theme-dark-gray);
+  margin: 0;
+}
+
+.container .signup-form .content .selects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .signup-form .content .selects .select-box {
+  border: 0.75px solid var(--theme-on-secondary);
+  border-radius: 4px;
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.container .signup-form .content .selects .select-box.active {
+  border: 2px solid var(--theme-primary);
+}
+
+.container .signup-form .content .selects .select-box.active svg {
+  fill: var(--theme-primary);
+}
+
+.container .signup-form .content .selects .select-box.active label {
+  color: var(--theme-primary);
+}
+
+.container .signup-form .content .selects .select-box select {
+  background: transparent;
+  color: white;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.container .signup-form .content .selects .select-box label {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.75rem;
+  color: var(--theme-dark-gray);
+  font: var(--main-super-sm);
+}
+
+.container .signup-form .content .selects .select-box .selectedValue {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+}
+
+.container .signup-form .content .selects .select-box i {
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateY(calc(50% - 7px));
+          transform: translateY(calc(50% - 7px));
+}
+
+.container .signup-form .content .selects .select-box svg {
+  fill: var(--theme-dark-gray);
+}
+/*# sourceMappingURL=signup-form.component.css.map */

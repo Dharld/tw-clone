@@ -1,13 +1,13 @@
 .input {
   border: 0.75px solid var(--theme-on-secondary);
   border-radius: 4px;
-  padding: 1.25rem 0.5rem;
   position: relative;
+  margin: 1.5rem 0;
   label {
     position: absolute;
-    color: var(--theme-on-secondary);
+    color: var(--theme-dark-gray);
     transition: all 150ms ease-in;
-    transform: translateY(0);
+    transform: translate(0.5rem, 0.5rem);
   }
   input {
     background: transparent;
@@ -17,6 +17,7 @@
     color: white;
     outline: none;
     font-size: 1.25rem;
+    padding: 1.25rem 0.5rem;
   }
 
   &:focus-within,
@@ -25,7 +26,7 @@
     label {
       color: var(--theme-primary);
       font-size: 0.65rem;
-      transform: translateY(-0.75rem);
+      transform: translate(0.5rem, 0.25rem);
     }
   }
 }

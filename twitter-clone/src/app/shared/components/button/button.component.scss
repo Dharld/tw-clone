@@ -18,7 +18,6 @@
   &.special {
     margin: 1.5rem 0;
     .profile-icon {
-      background: orange;
       color: white;
       border-radius: 50%;
       width: 25px;
@@ -77,6 +76,10 @@
     border: 1px solid white;
     background: transparent;
     color: white;
+
+    &:hover {
+      background-color: #181919;
+    }
   }
   &:hover {
     background-color: #e6e6e6;
