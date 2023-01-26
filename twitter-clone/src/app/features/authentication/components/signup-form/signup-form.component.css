@@ -73,58 +73,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.container .signup-form .content .selects .select-box {
-  border: 0.75px solid var(--theme-on-secondary);
-  border-radius: 4px;
-  position: relative;
-  margin: 1.5rem 0;
-}
-
-.container .signup-form .content .selects .select-box.active {
-  border: 2px solid var(--theme-primary);
-}
-
-.container .signup-form .content .selects .select-box.active svg {
-  fill: var(--theme-primary);
-}
-
-.container .signup-form .content .selects .select-box.active label {
-  color: var(--theme-primary);
-}
-
-.container .signup-form .content .selects .select-box select {
-  background: transparent;
-  color: white;
-  padding: 1.25rem 1.5rem;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.container .signup-form .content .selects .select-box label {
-  position: absolute;
-  top: 0.65rem;
-  left: 0.75rem;
-  color: var(--theme-dark-gray);
-  font: var(--main-super-sm);
-}
-
-.container .signup-form .content .selects .select-box .selectedValue {
-  position: absolute;
-  bottom: 0.75rem;
-  left: 0.75rem;
-}
-
-.container .signup-form .content .selects .select-box i {
-  position: absolute;
-  right: 0;
-  -webkit-transform: translateY(calc(50% - 7px));
-          transform: translateY(calc(50% - 7px));
-}
-
-.container .signup-form .content .selects .select-box svg {
-  fill: var(--theme-dark-gray);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=signup-form.component.css.map */

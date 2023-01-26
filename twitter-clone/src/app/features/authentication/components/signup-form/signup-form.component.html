@@ -25,34 +25,7 @@
           account is for a business, a pet, or something else.
         </p>
         <div class="selects">
-          <div class="select-box active long">
-            <select name="month" id="month">
-              <option value="January">January</option>
-              <option value="February">February</option>
-              <option value="March">March</option>
-            </select>
-            <label for="month">Month</label>
-            <div class="selectedValue">January</div>
-            <i>
-              <svg viewBox="0 0 24 24">
-                <use href="/assets/icons/icons.svg#arrowDown" />
-              </svg>
-            </i>
-          </div>
-          <!-- <div class="select-box med">
-            <select name="month" id="month">
-              <option value="31">31</option>
-              <option value="30">30</option>
-              <option value="29">29</option>
-            </select>
-          </div>
-          <div class="select-box year">
-            <select name="Year" id="Year">
-              <option value="2023">2023</option>
-              <option value="2022">2022</option>
-              <option value="2021">2021</option>
-            </select>
-          </div> -->
+          <app-select-box [values]="month" name="month"></app-select-box>
         </div>
       </div>
     </div>

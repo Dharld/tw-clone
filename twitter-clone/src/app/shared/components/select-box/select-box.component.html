@@ -1,0 +1,23 @@
+<div class="select-box long">
+  <select [name]="name" [id]="name">
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+  </select>
+  <label [for]="name">{{ name[0].toUpperCase() + name.slice(1) }}</label>
+  <div class="selectedValue">{{ selectedValue }}</div>
+  <i (click)="toggleDropDown()">
+    <svg viewBox="0 0 24 24">
+      <use href="/assets/icons/icons.svg#arrowDown" />
+    </svg>
+  </i>
+  <ul class="dropdown-list" #dropdown>
+    <li
+      class="dropdown-item"
+      *ngFor="let value of values"
+      (click)="selectValue(value)"
+    >
+      {{ value }}
+    </li>
+  </ul>
+</div>

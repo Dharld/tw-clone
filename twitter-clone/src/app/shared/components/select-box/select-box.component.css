@@ -1,0 +1,84 @@
+.select-box {
+  border: 0.75px solid var(--theme-on-secondary);
+  border-radius: 4px;
+  position: relative;
+  margin: 1.5rem 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.select-box.active {
+  border: 2px solid var(--theme-primary);
+}
+
+.select-box.active svg {
+  fill: var(--theme-primary);
+}
+
+.select-box.active label {
+  color: var(--theme-primary);
+}
+
+.select-box select {
+  background: transparent;
+  color: white;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.select-box label {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.75rem;
+  color: var(--theme-dark-gray);
+  font: var(--main-super-sm);
+}
+
+.select-box .selectedValue {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+}
+
+.select-box i {
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateY(calc(50% - 7px));
+          transform: translateY(calc(50% - 7px));
+}
+
+.select-box svg {
+  fill: var(--theme-dark-gray);
+}
+
+.select-box .dropdown-list {
+  position: absolute;
+  bottom: 1.75rem;
+  border: 0.75px solid var(--theme-on-secondary);
+  background: black;
+  width: 100%;
+  padding: 0.5rem 0rem 0.25rem;
+  max-height: 350px;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.select-box .dropdown-list.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.select-box .dropdown-list li.dropdown-item {
+  padding-inline: 0.5rem;
+  cursor: default;
+}
+
+.select-box .dropdown-list li.dropdown-item:hover {
+  background-color: var(--theme-primary);
+}
+/*# sourceMappingURL=select-box.component.css.map */
