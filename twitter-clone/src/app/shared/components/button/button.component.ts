@@ -13,6 +13,7 @@ export class ButtonComponent implements OnInit {
   @Input() text: string = '';
   @Input() type: ButtonType = 'simple';
   @Input() userData: any;
+  @Input() submit: boolean = false;
   public user!: User;
 
   constructor(public afAuth: AngularFireAuth) {

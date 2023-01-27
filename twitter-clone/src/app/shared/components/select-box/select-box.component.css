@@ -14,6 +14,8 @@
 
 .select-box.active svg {
   fill: var(--theme-primary);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .select-box.active label {
@@ -53,6 +55,12 @@
 
 .select-box svg {
   fill: var(--theme-dark-gray);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
 }
 
 .select-box .dropdown-list {

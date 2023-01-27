@@ -10,6 +10,7 @@
 
     svg {
       fill: var(--theme-primary);
+      transform: rotate(180deg);
     }
 
     label {
@@ -48,6 +49,8 @@
   }
   svg {
     fill: var(--theme-dark-gray);
+    transform: rotate(0deg);
+    transition: transform 300ms ease-in;
   }
 
   .dropdown-list {

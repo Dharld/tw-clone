@@ -41,5 +41,17 @@
     </svg> </i
   >{{ text }}
 </div>
-<button class="button" *ngIf="type == 'simple'">{{ text }}</button>
-<button class="button outline" *ngIf="type == 'outline'">{{ text }}</button>
+<button
+  class="button"
+  *ngIf="type == 'simple'"
+  [type]="submit ? 'submit' : 'text'"
+>
+  {{ text }}
+</button>
+<button
+  class="button outline"
+  *ngIf="type == 'outline'"
+  [type]="submit ? 'submit' : 'text'"
+>
+  {{ text }}
+</button>

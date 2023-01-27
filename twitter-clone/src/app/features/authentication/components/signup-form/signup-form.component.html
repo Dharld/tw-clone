@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="signup-form">
+  <form class="signup-form" [formGroup]="form" (ngSubmit)="submitForm()">
     <div class="first-line">
       <div class="close-icon">
         <a routerLink="../">
@@ -15,8 +15,18 @@
     <div class="content">
       <div class="headline">Create your account</div>
       <div class="inputs">
-        <app-input-box class="input" placeholder="Name"></app-input-box>
-        <app-input-box class="input" placeholder="Email"></app-input-box>
+        <app-input-box
+          class="input"
+          placeholder="Name"
+          name="name"
+          formControlName="name"
+        ></app-input-box>
+        <app-input-box
+          class="input"
+          placeholder="Email"
+          name="email"
+          formControlName="email"
+        ></app-input-box>
       </div>
       <div class="date-of-birth">
         <h3>Date of birth</h3>
@@ -26,8 +36,11 @@
         </p>
         <div class="selects">
           <app-select-box [values]="month" name="month"></app-select-box>
+          <app-select-box name="day"></app-select-box>
+          <app-select-box name="year"></app-select-box>
         </div>
       </div>
+      <app-button type="simple" text="Next" [submit]="true"></app-button>
     </div>
   </form>
 </div>

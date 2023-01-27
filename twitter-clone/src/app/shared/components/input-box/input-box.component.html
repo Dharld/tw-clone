@@ -1,6 +1,14 @@
 <div class="input">
   <label [for]="name">{{ placeholder }}</label>
-  <input type="text" [name]="name" [id]="name" required />
+  <input
+    #in
+    type="text"
+    [name]="name"
+    [id]="name"
+    required
+    (change)="onChange(in.value)"
+    (blur)="onTouched()"
+  />
 </div>
 
 <!-- [(ngModel)]="control"

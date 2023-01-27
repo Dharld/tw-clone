@@ -10,6 +10,7 @@ export class SelectBoxComponent implements OnInit {
   selectedValue = '';
   @Input() values: Array<string> = [];
   @ViewChild('dropdown') dp!: ElementRef;
+  @ViewChild('selectBox') sbox!: ElementRef;
 
   constructor() {}
 
@@ -22,9 +23,11 @@ export class SelectBoxComponent implements OnInit {
 
   toggleDropDown() {
     this.dp.nativeElement.classList.toggle('active');
+    this.sbox.nativeElement.classList.toggle('active');
   }
 
   closeDropDown() {
     this.dp.nativeElement.classList.remove('active');
+    this.sbox.nativeElement.classList.remove('active');
   }
 }
