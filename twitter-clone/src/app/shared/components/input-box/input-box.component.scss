@@ -51,8 +51,7 @@
   }
 }
 
-:host.ng-touched.ng-dirty,
-:host.ng-pristine {
+:host.ng-touched.ng-dirty {
   .input {
     // border: 2px solid var(--theme-dark-gray);
     label {

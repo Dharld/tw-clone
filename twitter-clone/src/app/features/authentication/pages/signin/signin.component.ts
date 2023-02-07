@@ -32,6 +32,23 @@ export class SigninComponent implements OnInit {
     this.step++;
   }
 
+  loginWithGoogleProvider() {
+    if (this.authService.isLoggedIn) {
+      this.router.navigate(['home']);
+      return;
+    }
+    this.showSpinner = true;
+    this.authService
+      .GoogleAuth()
+      .then(() => {
+        this.router.navigate(['home']);
+        this.showSpinner = false;
+      })
+      .catch((err) => {
+        console.log(err);
+        this.showSpinner = false;
+      });
+  }
   login() {
     this.showSpinner = true;
     const { email, password } = this.form.value;
@@ -39,7 +56,7 @@ export class SigninComponent implements OnInit {
       .SignIn(email, password)
       .then(() => {
         this.showSpinner = false;
-        this.router.navigate(['']);
+        this.router.navigate(['home']);
       })
       .catch((err) => {
         console.log(err);

@@ -18,12 +18,12 @@ export class AuthService {
     public afAuth: AngularFireAuth,
     public router: Router
   ) {
-    this.afAuth.authState.subscribe((user) => {
+    this.afAuth.user.subscribe((user) => {
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
       } else {
-        localStorage.setItem('user', 'null');
+        localStorage.removeItem('user');
       }
     });
   }
@@ -35,7 +35,7 @@ export class AuthService {
         this.SetUserData(result.user);
         this.afAuth.authState.subscribe((user) => {
           if (user) {
-            this.router.navigate(['']);
+            this.router.navigate(['/home']);
           }
         });
       })
@@ -64,13 +64,12 @@ export class AuthService {
 
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-      this.router.navigate(['']);
+      this.router.navigate(['home']);
     });
   }
 
   AuthLogin(provider: any) {
     return this.afAuth.signInWithPopup(provider).then((result) => {
-      this.router.navigate(['']);
       this.SetUserData(result.user);
     });
   }
@@ -86,7 +85,7 @@ export class AuthService {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
-      photoUrl: user.photoUrl,
+      photoUrl: user.photoUrl ? user.photoUrl : null,
       emailVerified: user.emailVerified,
     };
     return userRef.set(userData, { merge: true });
@@ -94,6 +93,7 @@ export class AuthService {
 
   SignOut() {
     return this.afAuth.signOut().then(() => {
+      console.log('Logout');
       localStorage.removeItem('user');
     });
   }

@@ -66,6 +66,7 @@
             placeholder="Email"
             name="email"
             formControlName="email"
+            [value]="form.controls['email'].value"
             [checkMark]="form.controls['email']!.valid"
           ></app-input-box>
           <app-input-box
@@ -73,6 +74,7 @@
             placeholder="Password"
             name="password"
             formControlName="password"
+            [value]="form.controls['password'].value"
             [checkMark]="form.controls['password']!.valid"
           ></app-input-box>
           <app-input-box
@@ -80,6 +82,7 @@
             placeholder="BirthDate"
             name="birthDate"
             formControlName="birthDate"
+            [value]="form.controls['birthDate'].value"
             [checkMark]="form.controls['birthDate']!.valid"
           ></app-input-box>
         </div>
