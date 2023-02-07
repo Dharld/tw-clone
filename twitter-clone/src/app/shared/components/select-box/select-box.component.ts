@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ElementRef,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 
 @Component({
   selector: 'app-select-box',
@@ -11,13 +19,20 @@ export class SelectBoxComponent implements OnInit {
   @Input() values: Array<string> = [];
   @ViewChild('dropdown') dp!: ElementRef;
   @ViewChild('selectBox') sbox!: ElementRef;
+  @Output() valueSelected: EventEmitter<string> = new EventEmitter();
 
-  constructor() {}
+  constructor() {
+    window.addEventListener('click', (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('.select-box') == null) this.closeDropDown();
+    });
+  }
 
   ngOnInit(): void {}
 
   selectValue(value: string) {
     this.selectedValue = value;
+    this.valueSelected.emit(this.selectedValue);
     this.closeDropDown();
   }
 

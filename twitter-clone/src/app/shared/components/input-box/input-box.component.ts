@@ -22,9 +22,9 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     },
   ],
 })
-export class InputBoxComponent
-  implements OnInit, ControlValueAccessor, AfterViewInit
-{
+export class InputBoxComponent implements OnInit, ControlValueAccessor {
+  @Input() checkMark = false;
+  @Input() readOnly = false;
   @Input() formControlInput = '';
   @Input() placeholder = '';
   @Input() name = '';
@@ -38,11 +38,8 @@ export class InputBoxComponent
 
   ngOnInit(): void {}
 
-  ngAfterViewInit() {
-    console.log(this.elementRef.nativeElement.childNodes[0].childNodes[1]);
-  }
   writeValue(value: any): void {
-    if (!this.disabled) {
+    if (!this.disabled && this.readOnly != true) {
       this.markAsTouched();
       this.renderer.setProperty(
         this.elementRef.nativeElement.childNodes[0].childNodes[1],

@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import User from 'src/app/core/models/user';
 
-type ButtonType = 'google' | 'apple' | 'simple' | 'outline';
+type ButtonType = 'google' | 'apple' | 'simple' | 'outline' | 'primary';
 
 @Component({
   selector: 'app-button',

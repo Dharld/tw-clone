@@ -44,13 +44,17 @@ export class AuthService {
       });
   }
 
-  SignUp(email: string, password: string) {
-    return this.afAuth
-      .createUserWithEmailAndPassword(email, password)
-      .then((result) => {
+  SignUp(email: string, password: string, additionalData: any) {
+    return this.afAuth.createUserWithEmailAndPassword(email, password);
+    /* .then((result) => {
         // this.SendVerificationMail();
-        this.SetUserData(result.user);
-      });
+        const user = {
+          uid: result.user?.uid,
+          email: result.user?.email,
+          ...additionalData,
+        };
+        this.SetUserData(user);
+      }); */
   }
 
   get isLoggedIn(): boolean {

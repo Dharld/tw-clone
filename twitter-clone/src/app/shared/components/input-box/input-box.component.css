@@ -25,12 +25,23 @@
   padding: 1.25rem 0.5rem;
 }
 
-.input:focus-within, .input.not-empty {
+.input:focus-within {
   border: 2px solid var(--theme-primary);
 }
 
-.input:focus-within label, .input.not-empty label {
+.input:focus-within label {
   color: var(--theme-primary);
+  font-size: 0.65rem;
+  -webkit-transform: translate(0.5rem, 0.25rem);
+          transform: translate(0.5rem, 0.25rem);
+}
+
+:host.ng-touched.ng-dirty .input {
+  border: 2px solid var(--theme-dark-gray);
+}
+
+:host.ng-touched.ng-dirty .input label {
+  color: var(--theme-dark-gray);
   font-size: 0.65rem;
   -webkit-transform: translate(0.5rem, 0.25rem);
           transform: translate(0.5rem, 0.25rem);

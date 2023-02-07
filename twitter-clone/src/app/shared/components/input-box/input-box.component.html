@@ -9,6 +9,11 @@
     (change)="onChange(in.value)"
     (blur)="onTouched()"
   />
+  <div class="checkmark" *ngIf="checkMark">
+    <svg viewBox="0 0 24 24">
+      <use href="/assets/icons/icons.svg#checkMark"></use>
+    </svg>
+  </div>
 </div>
 
 <!-- [(ngModel)]="control"

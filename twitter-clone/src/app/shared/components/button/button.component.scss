@@ -81,6 +81,14 @@
       background-color: #181919;
     }
   }
+  &.primary {
+    background-color: var(--theme-primary);
+    border: 2px solid var(--theme-primary);
+    color: white;
+    &:hover {
+      background-color: #1a8cd8;
+    }
+  }
   &:hover {
     background-color: #e6e6e6;
   }

@@ -10,37 +10,103 @@
           </i>
         </a>
       </div>
-      <div class="steps">Step 1 of 5</div>
+      <div class="steps">Step {{ step }} of 4</div>
     </div>
     <div class="content">
-      <div class="headline">Create your account</div>
-      <div class="inputs">
-        <app-input-box
-          class="input"
-          placeholder="Name"
-          name="name"
-          formControlName="name"
-        ></app-input-box>
-        <app-input-box
-          class="input"
-          placeholder="Email"
-          name="email"
-          formControlName="email"
-        ></app-input-box>
+      <div class="step" *ngIf="step == 1">
+        <div class="headline">Create your account</div>
+        <div class="inputs">
+          <app-input-box
+            class="input"
+            placeholder="Email"
+            name="email"
+            formControlName="email"
+          ></app-input-box>
+          <app-input-box
+            class="input"
+            placeholder="Password"
+            name="password"
+            formControlName="password"
+          ></app-input-box>
+        </div>
+        <div class="date-of-birth">
+          <h3>Date of birth</h3>
+          <p>
+            This will not be shown publicly. Confirm your own age, even if this
+            account is for a business, a pet, or something else.
+          </p>
+          <div class="selects">
+            <app-select-box
+              [values]="month"
+              name="month"
+              (valueSelected)="selectedMonth = $event; setBirthDate()"
+            ></app-select-box>
+            <app-select-box
+              [values]="days"
+              name="day"
+              (valueSelected)="selectedDay = $event; setBirthDate()"
+            ></app-select-box>
+            <app-select-box
+              [values]="years.reverse()"
+              name="year"
+              (valueSelected)="selectedYear = $event; setBirthDate()"
+            ></app-select-box>
+          </div>
+        </div>
+        <app-button type="simple" text="Next" (click)="nextStep()"></app-button>
       </div>
-      <div class="date-of-birth">
-        <h3>Date of birth</h3>
-        <p>
-          This will not be shown publicly. Confirm your own age, even if this
-          account is for a business, a pet, or something else.
+      <div class="step" *ngIf="step == 2">
+        <div class="headline">Confirm your account</div>
+        <div class="inputs">
+          <app-input-box
+            class="input"
+            placeholder="Email"
+            name="email"
+            formControlName="email"
+            [checkMark]="form.controls['email']!.valid"
+          ></app-input-box>
+          <app-input-box
+            class="input"
+            placeholder="Password"
+            name="password"
+            formControlName="password"
+            [checkMark]="form.controls['password']!.valid"
+          ></app-input-box>
+          <app-input-box
+            class="input"
+            placeholder="BirthDate"
+            name="birthDate"
+            formControlName="birthDate"
+            [checkMark]="form.controls['birthDate']!.valid"
+          ></app-input-box>
+        </div>
+        <p class="policy">
+          By signing up, you agree to the Terms of Service and Privacy Policy,
+          including Cookie Use. Twitter may use your contact information,
+          including your email address and phone number for purposes outlined in
+          our Privacy Policy, like keeping your account secure and personalizing
+          our services, including ads. Learn more. Others will be able to find
+          you by email or phone number, when provided, unless you choose
+          otherwise here.
         </p>
-        <div class="selects">
-          <app-select-box [values]="month" name="month"></app-select-box>
-          <app-select-box name="day"></app-select-box>
-          <app-select-box name="year"></app-select-box>
+        <div style="margin-top: 1.75rem"></div>
+        <app-button
+          type="primary"
+          text="SignUp"
+          [submit]="false"
+          (click)="nextStep()"
+        ></app-button>
+      </div>
+      <div class="step3" *ngIf="step == 3">
+        <div class="inputs">
+          <app-input-box
+            class="input"
+            placeholder="Enter your username"
+            name="username"
+            formControlName="username"
+          ></app-input-box>
         </div>
       </div>
-      <app-button type="simple" text="Next" [submit]="true"></app-button>
     </div>
   </form>
 </div>

@@ -20,13 +20,46 @@
     padding: 1.25rem 0.5rem;
   }
 
-  &:focus-within,
-  &.not-empty {
+  &:focus-within {
     border: 2px solid var(--theme-primary);
     label {
       color: var(--theme-primary);
       font-size: 0.65rem;
       transform: translate(0.5rem, 0.25rem);
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    right: 12px;
+    bottom: calc(50% - 24px);
+    svg {
+      fill: var(--theme-success);
+      width: 24px;
+    }
+  }
+}
+
+:host.ng-touched.ng-dirty,
+:host.ng-pristine {
+  .input {
+    border: 2px solid var(--theme-dark-gray);
+    label {
+      color: var(--theme-dark-gray);
+      font-size: 0.65rem;
+      transform: translate(0.5rem, 0.25rem);
+    }
+  }
+}
+:host.ng-touched.ng-dirty {
+  &.ng-invalid {
+    .input {
+      border: 2px solid var(--theme-error);
+      label {
+        color: var(--theme-error);
+        font-size: 0.65rem;
+        transform: translate(0.5rem, 0.25rem);
+      }
     }
   }
 }
