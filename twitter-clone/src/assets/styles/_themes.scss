@@ -21,7 +21,9 @@ $--main-bold-md: --main-bold-md;
 $--main-bold-sm: --main-bold-sm;
 $--main-bold-extra-sm: --main-bold-extra-sm;
 $--main-bg: --main-bg;
+$--main-bmd: --main-bmd;
 $--main-md: --main-md;
+$--main-amd: --main-amd;
 $--main-sm: --main-sm;
 $--main-extra-sm: --main-extra-sm;
 $--main-super-sm: --main-super-sm;
@@ -35,7 +37,9 @@ $fonts: (
   $--main-bold-sm: 700 1rem Roboto,
   $--main-bold-extra-sm: 700 0.85rem Roboto,
   $--main-bg: 2.5rem Roboto,
+  $--main-bmd: 1.75rem Roboto,
   $--main-md: 1.5rem Roboto,
+  $--main-amd: 1.25rem Roboto,
   $--main-sm: 1rem Roboto,
   $--main-extra-sm: 0.85rem Roboto,
   $--main-super-sm: 0.75rem Roboto,

@@ -14,6 +14,7 @@ $--theme-error: --theme-error;
 $--theme-success: --theme-success;
 $--theme-disabled: --theme-disabled;
 $--theme-on-disabled: --theme-on-disabled;
+$--theme-overlay: --theme-overlay;
 
 $theme-map-light: (
   $--theme-primary: #1da1f2,
@@ -32,4 +33,5 @@ $theme-map-light: (
   $--theme-success: #00ba7c,
   $--theme-disabled: #101113,
   $--theme-on-disabled: #2f3134,
+  $--theme-overlay: #181818,
 );

@@ -1,2 +1,37 @@
-<p>home works!</p>
-<button (click)="this.logout()">Sign Out</button>
+<div class="wrapper">
+  <header class="header">
+    <svg viewBox="0 0 24 24" class="twitterLogo">
+      <use href="/assets/icons/icons.svg#twitterLogo"></use>
+    </svg>
+    <nav class="navbar">
+      <ul class="navbar__ul">
+        <li class="navbar__li">
+          <a
+            [href]="route.href"
+            class="navbar__item {{ route.active ? 'active' : '' }}"
+            *ngFor="let route of routes"
+          >
+            <svg viewBox="0 0 24 24">
+              <use [attr.href]="route.iconPath"></use>
+            </svg>
+            <span>{{ route.href[0].toUpperCase() + route.href.slice(1) }}</span>
+          </a>
+        </li>
+      </ul>
+      <app-button text="Tweet" type="primary"></app-button>
+      <div class="profile">
+        <div class="icon"></div>
+        <div class="texts">
+          <div class="username">Yann Djoumessi</div>
+        </div>
+        <svg viewBox="0 0 24 24">
+          <use href="/assets/icons/icons.svg#moreIcon"></use>
+        </svg>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="content"></div>
+    <div class="sidebar"></div>
+  </main>
+</div>
