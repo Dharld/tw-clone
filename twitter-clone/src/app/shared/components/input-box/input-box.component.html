@@ -1,4 +1,4 @@
-<div class="input">
+<div class="input {{ disabled ? 'disabled' : '' }}">
   <label [for]="name">{{ placeholder }}</label>
   <input
     #in
@@ -8,6 +8,8 @@
     required
     (change)="onChange(in.value)"
     (blur)="onTouched()"
+    [disabled]="disabled"
+    [value]="value"
   />
   <div class="checkmark" *ngIf="checkMark">
     <svg viewBox="0 0 24 24">

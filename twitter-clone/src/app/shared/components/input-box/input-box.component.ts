@@ -28,10 +28,11 @@ export class InputBoxComponent implements OnInit, ControlValueAccessor {
   @Input() formControlInput = '';
   @Input() placeholder = '';
   @Input() name = '';
+  @Input() value = '';
   @ViewChild('in') in!: ElementRef;
   onChange = (value: any) => {};
   onTouched = () => {};
-  disabled = false;
+  @Input() disabled = false;
   touched = false;
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {}

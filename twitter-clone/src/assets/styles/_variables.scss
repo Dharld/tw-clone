@@ -12,6 +12,8 @@ $--theme-super-light-gray: --theme-super-light-gray;
 $--theme-on-super-light-gray: --theme-on-super-light-gray;
 $--theme-error: --theme-error;
 $--theme-success: --theme-success;
+$--theme-disabled: --theme-disabled;
+$--theme-on-disabled: --theme-on-disabled;
 
 $theme-map-light: (
   $--theme-primary: #1da1f2,
@@ -28,4 +30,6 @@ $theme-map-light: (
   $--theme-on-super-light-gray: #6e777b,
   $--theme-error: #f4212e,
   $--theme-success: #00ba7c,
+  $--theme-disabled: #101113,
+  $--theme-on-disabled: #2f3134,
 );

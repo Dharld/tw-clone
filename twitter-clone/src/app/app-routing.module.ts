@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
 import { AuthenticationComponent } from './features/authentication/authentication.component';
 import { SignupFormComponent } from './features/authentication/components/signup-form/signup-form.component';
 import { SendVerificationEmailComponent } from './features/authentication/pages/send-verification-email/send-verification-email.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'flow',

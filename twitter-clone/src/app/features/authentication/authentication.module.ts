@@ -16,6 +16,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from 'src/environments/environment';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { SendVerificationEmailComponent } from './pages/send-verification-email/send-verification-email.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SendVerificationEmailComponent } from './pages/send-verification-email/
     ReactiveFormsModule,
     FormsModule,
     SharedModule,
+    CoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,

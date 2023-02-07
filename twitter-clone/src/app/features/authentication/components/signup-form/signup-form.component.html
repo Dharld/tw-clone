@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="overlay" *ngIf="showSpinner">
+    <app-spinner></app-spinner>
+  </div>
   <form class="signup-form" [formGroup]="form" (ngSubmit)="submitForm()">
     <div class="first-line">
       <div class="close-icon">

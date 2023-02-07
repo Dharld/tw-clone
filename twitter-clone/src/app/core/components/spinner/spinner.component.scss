@@ -1,0 +1,17 @@
+.spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid var(--theme-dark-gray);
+  border-top: 5px solid var(--theme-primary);
+  animation: spin360 360ms ease-in both infinite;
+
+  @keyframes spin360 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

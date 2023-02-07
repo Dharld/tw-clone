@@ -1,19 +1,55 @@
 <div class="content">
-  <h1 class="headline">Sign in to Twitter</h1>
-  <div class="buttons">
-    <app-button type="google" (click)="authService.GoogleAuth()"></app-button>
-    <app-button type="apple" text="Sign in With Apple"></app-button>
+  <div class="overlay" *ngIf="showSpinner">
+    <app-spinner></app-spinner>
   </div>
+  <h1 class="headline">Sign in to Twitter</h1>
+  <div class="step" *ngIf="step == 1">
+    <div class="buttons">
+      <app-button type="google" (click)="authService.GoogleAuth()"></app-button>
+      <app-button type="apple" text="Sign in With Apple"></app-button>
+    </div>
 
-  <span class="separator">or</span>
-  <app-input-box
-    placeholder="Phone,Email or Username"
-    name="login-token"
-  ></app-input-box>
-  <app-button text="Next"></app-button>
-  <app-button type="outline" text="Forgot Password ?"></app-button>
+    <span class="separator">or</span>
+    <form [formGroup]="form">
+      <app-input-box
+        placeholder="Email"
+        name="email"
+        formControlName="email"
+      ></app-input-box>
+    </form>
 
-  <div class="already-have-an-account">
-    Don't have an account? <a routerLink="/flow/signup"><span>Signup</span></a>
+    <app-button text="Next" (click)="nextStep()"></app-button>
+    <app-button type="outline" text="Forgot Password ?"></app-button>
+
+    <div class="already-have-an-account">
+      Don't have an account?
+      <a routerLink="/flow/signup"><span>Signup</span></a>
+    </div>
+  </div>
+  <div class="step" *ngIf="step == 2">
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <div class="inputs">
+        <div class="input">
+          <app-input-box
+            placeholder="Email"
+            name="email"
+            formControlName="email"
+            [disabled]="true"
+            [value]="form.controls['email'].value"
+          ></app-input-box>
+        </div>
+        <div class="input">
+          <app-input-box
+            placeholder="Password"
+            name="password"
+            formControlName="password"
+          >
+          </app-input-box>
+        </div>
+      </div>
+      <div class="loginButton">
+        <app-button text="Login" [submit]="true"></app-button>
+      </div>
+    </form>
   </div>
 </div>

@@ -61,6 +61,9 @@ export class SignupFormComponent implements OnInit {
   form: FormGroup;
   step = 1;
 
+  //
+  showSpinner = false;
+
   constructor(
     private fb: FormBuilder,
     private auth: AuthService,
@@ -106,21 +109,31 @@ export class SignupFormComponent implements OnInit {
   }
 
   submitForm() {
+    this.showSpinner = true;
     const { email, password, birthDate, displayName } = this.form.value;
-    this.auth.SignUp(email, password, {}).then((userCredentials) => {
-      this.auth.SendVerificationMail();
-      const user = {
-        uid: userCredentials.user?.uid,
-        email: email,
-        birthDate,
-        displayName,
-        photoUrl: null,
-        emailVerified: false,
-      };
-      this.auth.SetUserData(user);
-      this.router.navigate(['/sendVerificationEmail'], {
-        queryParams: { emailToVerify: email },
+    this.auth
+      .SignUp(email, password, {})
+      .then((userCredentials) => {
+        this.auth.SendVerificationMail();
+        const user = {
+          uid: userCredentials.user?.uid,
+          email: email,
+          birthDate,
+          displayName,
+          photoUrl: null,
+          emailVerified: false,
+        };
+        this.auth.SetUserData(user);
+        this.router.navigate(['/sendVerificationEmail'], {
+          queryParams: { emailToVerify: email },
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        this.showSpinner = false;
+      })
+      .finally(() => {
+        this.showSpinner = false;
       });
-    });
   }
 }

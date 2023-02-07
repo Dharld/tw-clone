@@ -20,6 +20,17 @@
     padding: 1.25rem 0.5rem;
   }
 
+  &.disabled {
+    border: 0.75px solid var(--theme-disabled);
+    label {
+      color: var(--theme-on-disabled);
+    }
+    input {
+      background-color: var(--theme-disabled);
+      color: var(--theme-on-disabled);
+    }
+  }
+
   &:focus-within {
     border: 2px solid var(--theme-primary);
     label {
