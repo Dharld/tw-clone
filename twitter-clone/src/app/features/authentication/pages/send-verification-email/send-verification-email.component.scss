@@ -1,0 +1,19 @@
+.sendVerif {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--theme-secondary);
+
+  .container {
+    padding: 2rem 0;
+    color: white;
+
+    .text {
+      color: var(--theme-);
+    }
+
+    .buttonRedirect {
+      margin-top: 10rem;
+      max-width: 400px;
+    }
+  }
+}

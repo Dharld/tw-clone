@@ -1,9 +1,18 @@
-<div class="container">
-  <div class="content">
-    <div class="headline">Verify your email</div>
-    <div class="text">
-      A verification email has been send to usertest@gmail.com. Please login to
-      your email account and verify it.
+<div class="sendVerif">
+  <div class="container">
+    <div class="content">
+      <div class="headline">Verify your email</div>
+      <div class="text">
+        A verification email has been send to {{ emailToVerify }}. Please login
+        to your email account and verify it.
+      </div>
+    </div>
+    <div class="buttonRedirect">
+      <app-button
+        text="Sign In"
+        type="primary"
+        (click)="router.navigate(['/flow/signin'])"
+      ></app-button>
     </div>
   </div>
 </div>

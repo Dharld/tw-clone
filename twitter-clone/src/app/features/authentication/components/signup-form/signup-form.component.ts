@@ -107,14 +107,20 @@ export class SignupFormComponent implements OnInit {
 
   submitForm() {
     const { email, password, birthDate, displayName } = this.form.value;
-    this.auth
-      .SignUp(email, password, { birthDate, displayName })
-      .then((userCredentials: any) => {
-        this.auth.SendVerificationMail();
-        console.log(userCredentials);
-        this.router.navigate(['/sendVerificationEmail'], {
-          queryParams: { emailToVerify: email },
-        });
+    this.auth.SignUp(email, password, {}).then((userCredentials) => {
+      this.auth.SendVerificationMail();
+      const user = {
+        uid: userCredentials.user?.uid,
+        email: email,
+        birthDate,
+        displayName,
+        photoUrl: null,
+        emailVerified: false,
+      };
+      this.auth.SetUserData(user);
+      this.router.navigate(['/sendVerificationEmail'], {
+        queryParams: { emailToVerify: email },
       });
+    });
   }
 }
