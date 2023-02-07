@@ -15,6 +15,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from 'src/environments/environment';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
+import { SendVerificationEmailComponent } from './pages/send-verification-email/send-verification-email.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SignupFormComponent } from './components/signup-form/signup-form.compon
     SignupComponent,
     SigninComponent,
     SignupFormComponent,
+    SendVerificationEmailComponent,
   ],
   imports: [
     CommonModule,

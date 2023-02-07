@@ -43,14 +43,15 @@
 :host.ng-touched.ng-dirty,
 :host.ng-pristine {
   .input {
-    border: 2px solid var(--theme-dark-gray);
+    // border: 2px solid var(--theme-dark-gray);
     label {
-      color: var(--theme-dark-gray);
+      // color: var(--theme-dark-gray);
       font-size: 0.65rem;
       transform: translate(0.5rem, 0.25rem);
     }
   }
 }
+
 :host.ng-touched.ng-dirty {
   &.ng-invalid {
     .input {

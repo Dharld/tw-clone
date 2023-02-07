@@ -91,8 +91,7 @@
         </p>
         <div style="margin-top: 1.75rem"></div>
         <app-button
-          type="primary"
-          text="SignUp"
+          text="Continue"
           [submit]="false"
           (click)="nextStep()"
         ></app-button>
@@ -102,9 +101,16 @@
           <app-input-box
             class="input"
             placeholder="Enter your username"
-            name="username"
-            formControlName="username"
+            name="displayName"
+            formControlName="displayName"
           ></app-input-box>
+          <div class="submit-button">
+            <app-button
+              type="primary"
+              [submit]="true"
+              text="Sign Up"
+            ></app-button>
+          </div>
         </div>
       </div>
     </div>

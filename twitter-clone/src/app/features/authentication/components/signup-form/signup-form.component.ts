@@ -9,6 +9,7 @@ import { range } from 'src/app/core/utils/range';
 import { isLeapYear } from 'src/app/core/utils/isLeap';
 import { formatNumber } from 'src/app/core/utils/formatDate';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-form',
@@ -60,7 +61,11 @@ export class SignupFormComponent implements OnInit {
   form: FormGroup;
   step = 1;
 
-  constructor(private fb: FormBuilder, private auth: AuthService) {
+  constructor(
+    private fb: FormBuilder,
+    private auth: AuthService,
+    private router: Router
+  ) {
     this.form = this.fb.group({
       password: ['', [Validators.required, Validators.minLength(8)]],
       email: ['', [Validators.email, Validators.required]],
@@ -70,7 +75,7 @@ export class SignupFormComponent implements OnInit {
           /(?:0[1-9]|1[012])[-/.](?:0[1-9]|[12][0-9]|3[01])[-/.](?:19d{2}|20[01][0-9]|2020)\b/
         ),
       ],
-      username: [''],
+      displayName: [''],
     });
   }
 
@@ -101,9 +106,15 @@ export class SignupFormComponent implements OnInit {
   }
 
   submitForm() {
-    const { email, password, birthDate } = this.form.value;
-    this.auth.SignUp(email, password, { birthDate }).then(() => {
-      this.nextStep();
-    });
+    const { email, password, birthDate, displayName } = this.form.value;
+    this.auth
+      .SignUp(email, password, { birthDate, displayName })
+      .then((userCredentials: any) => {
+        this.auth.SendVerificationMail();
+        console.log(userCredentials);
+        this.router.navigate(['/sendVerificationEmail'], {
+          queryParams: { emailToVerify: email },
+        });
+      });
   }
 }

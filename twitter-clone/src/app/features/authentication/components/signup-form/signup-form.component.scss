@@ -13,9 +13,10 @@
     background-color: #000000;
     color: white;
     width: 80%;
+    min-height: 400px;
     max-width: 600px;
     max-height: 640px;
-    padding: 1rem 1rem 5rem;
+    padding: 1rem 1rem 3.25rem;
     margin: auto;
     border-radius: 25px;
 
@@ -48,6 +49,9 @@
       .inputs {
         .input {
           margin: 1rem 0;
+        }
+        .submit-button {
+          margin-top: 4rem;
         }
       }
 
